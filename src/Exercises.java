@@ -53,14 +53,14 @@ public class Exercises {
 
     public void fourth(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Input the number:");
+        System.out.println("Введіть число:");
         int x = scan.nextInt();
 
-        if (x < 1000 || x > 9999){
-            System.out.println("Invalid number");
-        } else {
-            System.out.println("Is the number palindrome? : " + isPalindrome(x));
+        while (x <= 1000 || x >9999) {
+            System.out.println("Введіть число від 1000 до 9999 :");
+            x = scan.nextInt();
         }
+        System.out.println("Число паліндром? : " + isPalindrome(x));
     }
     public boolean isPalindrome(int x) {
         if(x<0) return false;
